@@ -20,8 +20,9 @@ export default {
   
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../styles/general.scss';
+
 
 nav{
   padding: 1rem;
