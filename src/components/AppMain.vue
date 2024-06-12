@@ -39,9 +39,8 @@ export default {
 @use '../styles/general.scss';
 
 .bg {
-  padding: 2rem;
+  padding: 5rem;
   background-color: #d48f38;
-  height: 100vh;
 }
 
 </style>

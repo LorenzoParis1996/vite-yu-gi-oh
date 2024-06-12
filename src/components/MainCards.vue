@@ -27,4 +27,13 @@ export default {
 
 <style lang="scss" scoped>
 
+.wrapper {
+    padding: 1rem;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
 </style>
