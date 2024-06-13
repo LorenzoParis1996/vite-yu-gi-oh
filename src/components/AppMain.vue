@@ -29,6 +29,14 @@ export default {
         this.archetypes = response.data;
         console.log(response.data);
       });
+    },
+    filterArchetype(filtered) {
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype='+ this.archetypes[filtered].archetype_name)
+      .then((response) => {
+        console.log(response.data.data);
+        this.cards = response.data.data;
+      })
+      console.log(this.archetypes[filtered].archetypes_name);
     }
   },
   created() {
@@ -40,7 +48,7 @@ export default {
 
 <template>
 <div class="bg">
-  <MainSelect/>
+  <MainSelect :archetypes="archetypes" @searched="filterArchetype"/>
   <MainCards :cards="cards"/>
 </div>
   

@@ -1,7 +1,15 @@
 <script>
 export default {
     data() {
-        return
+        return {
+           
+        }
+    },
+    props: {
+        archetypes: {
+            type: Object,
+            required: true
+        }
     }
 }
 
@@ -11,10 +19,8 @@ export default {
 <template>
 <select name="" id="">
  <option value="none">Filter</option>
- <option value="">1</option>
- <option value="">2</option>
- <option value="">3</option>
- <option value="">4</option>
+ <option v-for="(item, index) in archetypes" :key="index"  value="index" @click="$emit('searched', index)">{{ item.archetype_name }}</option>
+
 </select>
 
 </template>
