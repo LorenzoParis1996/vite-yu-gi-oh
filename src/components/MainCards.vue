@@ -20,7 +20,11 @@ export default {
 </script>
 
 <template>
- <div class="wrapper">
+  <div class="counter">
+
+    <h2>Found {{ this.cards.length }} cards</h2>
+  </div>
+  <div class="wrapper">
    <SingleCard v-for="(item, index) in cards" :key="item.id" :singleCard="item"/>
 </div>
 </template>
@@ -28,12 +32,19 @@ export default {
 <style lang="scss" scoped>
 
 .wrapper {
-    padding: 1rem;
+    padding: 0rem 1rem 1rem;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
+}
+
+.counter {
+  background-color: #212529;
+  color: white;
+  padding: 1rem;
+  
 }
 
 </style>

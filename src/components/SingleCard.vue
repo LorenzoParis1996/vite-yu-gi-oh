@@ -30,7 +30,7 @@ export default {
 <style lang="scss" scoped>
 
 article {
-    width: calc(100% / 5);
+    width: calc(100% / 6);
     background-color: #d48f38;
     margin: 0.5rem;
 
@@ -41,8 +41,8 @@ article {
 
     p {
         text-align: center;
-        padding: 2rem 0.5rem;
         font-size: 20px;
+        padding: 2rem 0.5rem;
 
         }
     .white {
