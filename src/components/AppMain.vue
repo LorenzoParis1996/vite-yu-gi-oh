@@ -7,7 +7,8 @@ import axios from 'axios';
 export default {
   data() {
      return {
-        cards:[]
+        cards:[],
+        archetypes:[]
      }
   },
   components: {
@@ -21,10 +22,18 @@ export default {
             this.cards = response.data.data;
             console.log(this.cards);
         });
+    },
+    getArchetypes() {
+      axios.get('https://db.ygoprodeck.com/api/v7/archetypes.php')
+      .then((response) => {
+        this.archetypes = response.data;
+        console.log(response.data);
+      });
     }
   },
   created() {
     this.getData();
+    this.getArchetypes();
   }
 }
 </script>
